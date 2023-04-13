@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import { FONT } from '../constants/variables';
 const GlobalStyle = createGlobalStyle`
 *,*::after,*::before{
     box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
     max-width: 100vw;
     margin-left: auto;
     margin-right: auto;
-	font-family: 'Inter', sans-serif;
+	font-family:${FONT.primaryFont}
 }
 `;
 
