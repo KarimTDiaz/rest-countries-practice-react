@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { FONT } from '../constants/variables';
+import { COLORS, FONT } from '../constants/variables';
 const GlobalStyle = createGlobalStyle`
 *,*::after,*::before{
     box-sizing: border-box;
@@ -23,7 +23,9 @@ body {
     max-width: 100vw;
     margin-left: auto;
     margin-right: auto;
-	font-family:${FONT.primaryFont}
+	font-family:${FONT.primaryFont};
+	background-color: ${COLORS.bodyBg};
+	color: ${COLORS.text}
 }
 `;
 
