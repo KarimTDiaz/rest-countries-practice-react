@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
+import { API_REQUEST } from '../constants/requests';
 
 export const useFetch = url => {
 	const [data, setData] = useState([]);
-	useEffect(() => {
-		fetchData(url, setData);
-	}, []);
+	const [link, setLink] = useState(url);
 
-	return { data };
+	useEffect(() => {
+		fetchData(link, setData);
+	}, [link]);
+	return { setLink, data };
 };
 
-const fetchData = async (url, setData) => {
-	const response = await fetch(url);
+const fetchData = async (link, setData) => {
+	const response = await fetch(link);
 	const data = await response.json();
 	setData(data);
 };

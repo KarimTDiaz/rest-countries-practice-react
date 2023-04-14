@@ -15,4 +15,9 @@ const StyledForm = styled.form`
 	margin-bottom: 2rem;
 `;
 
-export { StyledForm, StyledHome };
+const HomeCountriesContainer = styled.div`
+	display: grid;
+	gap: 2rem;
+`;
+
+export { StyledForm, StyledHome, HomeCountriesContainer };

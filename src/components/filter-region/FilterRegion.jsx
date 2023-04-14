@@ -1,20 +1,20 @@
-import { useFetch } from '../../hooks/useFetch';
 import { StyledSelect } from './styles';
 import { API_REQUEST } from '../../constants/requests';
-import { useState } from 'react';
+import { useEffect } from 'react';
 
-const FilterRegion = () => {
-	const [region, setRegion] = useState();
-	const {} = useFetch(API_REQUEST + '.' + region);
+const FilterRegion = ({ region, setRegion, setLink }) => {
+	useEffect(() => {
+		setLink(API_REQUEST[region]);
+	}, [region]);
 	return (
 		<>
-			<StyledSelect onChange={ev => setRegion(ev.target.value.toLowerCase())}>
-				<option>Filter by Region</option>
-				<option>Africa</option>
-				<option>America</option>
-				<option>Asia</option>
-				<option>Europe</option>
-				<option>Oceania</option>
+			<StyledSelect onChange={ev => setRegion(ev.target.value)}>
+				<option value='all'>Filter by Region</option>
+				<option value='africa'>Africa</option>
+				<option value='america'>America</option>
+				<option value='asia'>Asia</option>
+				<option value='europe'>Europe</option>
+				<option value='oceania'>Oceania</option>
 			</StyledSelect>
 		</>
 	);
