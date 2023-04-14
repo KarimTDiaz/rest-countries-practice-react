@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyledInput } from './styles';
 import { API_REQUEST } from '../../constants/requests';
 
 const FilterSearch = ({ setLink }) => {
 	const [filterName, setFilterName] = useState('');
+
+	useEffect(() => {
+		setLink(API_REQUEST.name + filterName);
+	}, [filterName]);
 
 	return (
 		<StyledInput
@@ -12,7 +16,6 @@ const FilterSearch = ({ setLink }) => {
 			placeholder='Search your country...'
 			onChange={ev => {
 				setFilterName(ev.target.value);
-				setLink(API_REQUEST.name + );
 			}}
 		/>
 	);
