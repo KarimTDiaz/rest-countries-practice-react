@@ -26,7 +26,11 @@ const Home = () => {
 						<h1>Loading...</h1>
 					) : (
 						data.map(country => (
-							<CountryCard key={v4()} country={country}></CountryCard>
+							<CountryCard
+								key={v4()}
+								country={country}
+								setLink={setLink}
+							></CountryCard>
 						))
 					)}
 				</HomeCountriesContainer>

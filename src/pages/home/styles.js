@@ -18,6 +18,9 @@ const StyledForm = styled.form`
 const HomeCountriesContainer = styled.div`
 	display: grid;
 	gap: 2rem;
+	@media screen and (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 `;
 
 export { StyledForm, StyledHome, HomeCountriesContainer };

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { COLORS } from '../../constants/variables';
+import { NavLink } from 'react-router-dom';
 
 const StyledCountryCard = styled.div`
 	background-color: ${COLORS.countryCardBg};

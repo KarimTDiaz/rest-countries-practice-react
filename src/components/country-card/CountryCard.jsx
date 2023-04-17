@@ -6,10 +6,13 @@ import {
 	CountryKey,
 	CountryValue
 } from './styles';
-
+import { useNavigate } from 'react-router-dom';
 const CountryCard = ({ country }) => {
+	const navigate = useNavigate();
 	return (
-		<StyledCountryCard>
+		<StyledCountryCard
+			onClick={() => navigate(`country/${country.name.common.toLowerCase()}`)}
+		>
 			<CountryImage src={country.flags.svg} />
 			<CountryInfo>
 				<CountryName>{country.name.common}</CountryName>
