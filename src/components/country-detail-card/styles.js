@@ -20,10 +20,13 @@ const CountryValue = styled.span`
 	font-weight: 300;
 `;
 
+const CountryBorderedContainer = styled.div``;
+
 export {
 	StyledCountryDetailCard,
 	CountryDetailImage,
 	CountryName,
 	CountryKey,
-	CountryValue
+	CountryValue,
+	CountryBorderedContainer
 };

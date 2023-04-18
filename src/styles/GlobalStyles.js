@@ -20,7 +20,7 @@ a {
   }
 body {
 	margin: 0;
-    max-width: 100vw;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
 	font-family:${FONT.primaryFont};

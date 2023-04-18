@@ -15,7 +15,11 @@ const CountryDetails = () => {
 
 	return (
 		<>
-			<CountryDetailCard country={data} />
+			{data.length === 0 ? (
+				<h1>Loading...</h1>
+			) : (
+				<CountryDetailCard {...data[0]} />
+			)}
 		</>
 	);
 };
